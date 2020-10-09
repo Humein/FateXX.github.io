@@ -120,7 +120,45 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/09/%E9%A1%B9%E7%9B%AE%E5%AF%B9%E4%BA%8E%E9%87%8D%E5%A4%8D%E5%8A%9F%E8%83%BD%E6%8A%BD%E5%8F%96%E7%9A%84%E5%8F%AF%E5%81%9A%E4%BB%A5%E4%B8%8B%E5%A4%84%E7%90%86/" data-id="ckg1x1c8c00025zfy9azga7m5" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/09/%E9%A1%B9%E7%9B%AE%E5%AF%B9%E4%BA%8E%E9%87%8D%E5%A4%8D%E5%8A%9F%E8%83%BD%E6%8A%BD%E5%8F%96%E7%9A%84%E5%8F%AF%E5%81%9A%E4%BB%A5%E4%B8%8B%E5%A4%84%E7%90%86/" data-id="ckg1x2evd00028qfy6tio0mt9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-weekly_report-sh" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/09/weekly_report-sh/" class="article-date">
+  <time datetime="2020-10-09T02:25:50.000Z" itemprop="datePublished">2020-10-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/09/weekly_report-sh/">weekly_report-sh</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Git-记录生成"><a href="#Git-记录生成" class="headerlink" title="Git 记录生成"></a>Git 记录生成</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Generates git changelog grouped by day and output it to file</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> optional parameters</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> -a	to filter by author</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> -s	to select start date</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> -e	to select end date</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> -o	to save it to file</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> -r	to specify the repository path</span></span><br><span class="line"></span><br><span class="line">NEXT=$(date +%F)</span><br><span class="line">SINCE=&quot;last.Monday&quot;</span><br><span class="line">UNTIL=$NEXT</span><br><span class="line">AUTHOR=$(git config user.email)</span><br><span class="line">OUTPUT=&quot;$(date +%F).log&quot;</span><br><span class="line"></span><br><span class="line">while getopts &quot;a:s:e:o:r:&quot; arg</span><br><span class="line">do</span><br><span class="line">  case $arg in</span><br><span class="line">    a)</span><br><span class="line">      AUTHOR=$OPTARG</span><br><span class="line">      ;;</span><br><span class="line">    s)</span><br><span class="line">      SINCE=$OPTARG</span><br><span class="line">      ;;</span><br><span class="line">    e)</span><br><span class="line">      UNTIL=$OPTARG</span><br><span class="line">      ;;</span><br><span class="line">    o)</span><br><span class="line">      OUTPUT=$OPTARG</span><br><span class="line">      ;;</span><br><span class="line">    r)</span><br><span class="line">      REPO=$OPTARG</span><br><span class="line">      ;;</span><br><span class="line">    ?)</span><br><span class="line">      echo &quot;unknown argument&quot;</span><br><span class="line">      exit 1</span><br><span class="line">      ;;</span><br><span class="line">  esac</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">(</span><br><span class="line">git -C &quot;$&#123;REPO&#125;&quot; log --author=&quot;$&#123;AUTHOR&#125;&quot; --since=&quot;$&#123;SINCE&#125;&quot; --until=&quot;$&#123;UNTIL&#125;&quot; --format=&quot;%cd&quot; --date=short | sort -u | while read DATE ; do</span><br><span class="line">  GIT_PAGER=$(git -C &quot;$&#123;REPO&#125;&quot; log --no-merges --reverse --format=&quot;* %s&quot; --since=&quot;$&#123;DATE&#125; 00:00:00&quot; --until=&quot;$&#123;DATE&#125; 23:59:59&quot; --author=&quot;$&#123;AUTHOR&#125;&quot;)</span><br><span class="line">  if [ ! -z &quot;$GIT_PAGER&quot; ]</span><br><span class="line">  then</span><br><span class="line">    echo &quot;[$&#123;DATE&#125;]&quot;</span><br><span class="line">    echo &quot;$&#123;GIT_PAGER&#125;&quot;</span><br><span class="line">    echo</span><br><span class="line">  fi</span><br><span class="line">done</span><br><span class="line">) &gt; $OUTPUT</span><br><span class="line"></span><br><span class="line">echo &quot;log is written to $&#123;OUTPUT&#125;&quot;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/09/weekly_report-sh/" data-id="ckg1x2evf00038qfyaa8n6fkm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -236,7 +274,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/30/GitHub%20Pages%20+%20Hexo%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ckg1x1c8200005zfy0dpl6ap1" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/09/30/GitHub%20Pages%20+%20Hexo%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ckg1x2ev400008qfy43yk7jtc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -285,7 +323,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/30/hello-world/" data-id="ckg1x1c8a00015zfygxfe0mao" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/09/30/hello-world/" data-id="ckg1x2eva00018qfy13c6549m" class="article-share-link">Share</a>
       
       
     </footer>
@@ -327,6 +365,10 @@
         
           <li>
             <a href="/2020/10/09/%E9%A1%B9%E7%9B%AE%E5%AF%B9%E4%BA%8E%E9%87%8D%E5%A4%8D%E5%8A%9F%E8%83%BD%E6%8A%BD%E5%8F%96%E7%9A%84%E5%8F%AF%E5%81%9A%E4%BB%A5%E4%B8%8B%E5%A4%84%E7%90%86/">项目对于重复功能抽取的可做以下处理</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/09/weekly_report-sh/">weekly_report-sh</a>
           </li>
         
           <li>
