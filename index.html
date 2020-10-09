@@ -5,17 +5,17 @@
   
 
   
-  <title>鑫鑫的Blog</title>
+  <title>Humein</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="鑫鑫的Blog">
+<meta property="og:title" content="Humein">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="鑫鑫的Blog">
+<meta property="og:site_name" content="Humein">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="鑫鑫">
+<meta property="article:author" content="XinXin">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="鑫鑫的Blog" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Humein" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -36,7 +36,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">鑫鑫的Blog</a>
+        <a href="/" id="logo">Humein</a>
       </h1>
       
     </div>
@@ -63,6 +63,62 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-项目对于重复功能抽取的可做以下处理" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/09/%E9%A1%B9%E7%9B%AE%E5%AF%B9%E4%BA%8E%E9%87%8D%E5%A4%8D%E5%8A%9F%E8%83%BD%E6%8A%BD%E5%8F%96%E7%9A%84%E5%8F%AF%E5%81%9A%E4%BB%A5%E4%B8%8B%E5%A4%84%E7%90%86/" class="article-date">
+  <time datetime="2020-10-09T02:25:50.000Z" itemprop="datePublished">2020-10-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> 基类</p>
+<ul>
+<li><p>抽象出一个基类； A ,B,C 继承它</p>
+<p> 缺点：</p>
+</li>
+<li><p>可读性很差，例如，对于 A/B/C 来说，你看不出来任何feature的行为, 个类里面没有任何东西能告诉你它需要feature。这样表意不明确，因为别处可能会随机存在一个feature，你甚至不知道它是从哪里来的</p>
+</li>
+<li><p>随着业务增加，基类会越来越臃肿。</p>
+</li>
+</ul>
+<p>分类</p>
+<ul>
+<li><p>对他们的基类比如UIView进行扩展, 避免不同类型的feature都融合在一个类中</p>
+<p>  缺点:</p>
+</li>
+<li><p>对于不同的类型Object就无法通用</p>
+</li>
+</ul>
+<p>协议</p>
+<ul>
+<li><p>功能具有插拔性</p>
+</li>
+<li><p>适用场景广泛</p>
+</li>
+<li><p>避免一个类其实只要一个功能情况下，也要继承着多个功能模块</p>
+<p>  缺点:</p>
+<p>OC的协议没有默认实现</p>
+</li>
+</ul>
+<p>了解不同的方案优缺点，可以应对开发中不同的case。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/09/%E9%A1%B9%E7%9B%AE%E5%AF%B9%E4%BA%8E%E9%87%8D%E5%A4%8D%E5%8A%9F%E8%83%BD%E6%8A%BD%E5%8F%96%E7%9A%84%E5%8F%AF%E5%81%9A%E4%BB%A5%E4%B8%8B%E5%A4%84%E7%90%86/" data-id="ckg1mvngi0002nufygaz982g4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-GitHub Pages + Hexo免费搭建个人博客" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -152,9 +208,15 @@
 </ul>
 </li>
 <li><h5 id="Blog-更新"><a href="#Blog-更新" class="headerlink" title="Blog 更新"></a>Blog 更新</h5><ul>
-<li>Blog目录下 执行命令 <code>hexo d</code> 就行了。文件会默认Push到git上面</li>
-<li>如果更新不成功-网页没有更新先 <code>hexo clean</code> 下</li>
+<li><p>source/_posts 中更新md文档</p>
+</li>
+<li><p>Blog目录下 执行命令 <code>hexo d</code> 就行了。文件会默认Push到git上面</p>
+</li>
+<li><p>如果更新不成功-网页没有更新先 <code>hexo clean</code> 下</p>
+</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">清理：hexo clean</span><br><span class="line">生成：hexo g</span><br><span class="line">启动：hexo s</span><br><span class="line">推至远端: hexo d</span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
 <h1 id="Hexo主题的使用"><a href="#Hexo主题的使用" class="headerlink" title="Hexo主题的使用"></a>Hexo主题的使用</h1><p>Quote:</p>
@@ -164,7 +226,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/30/GitHub%20Pages%20+%20Hexo%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ckfp8k2930000wefy3jmgga2u" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/09/30/GitHub%20Pages%20+%20Hexo%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ckg1mvng90000nufy0prr6ti8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -213,7 +275,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/30/hello-world/" data-id="ckfp8k2990001wefy3b1n72ao" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/09/30/hello-world/" data-id="ckg1mvngg0001nufygoxhc213" class="article-share-link">Share</a>
       
       
     </footer>
@@ -241,7 +303,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li></ul>
     </div>
   </div>
 
@@ -252,6 +314,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/10/09/%E9%A1%B9%E7%9B%AE%E5%AF%B9%E4%BA%8E%E9%87%8D%E5%A4%8D%E5%8A%9F%E8%83%BD%E6%8A%BD%E5%8F%96%E7%9A%84%E5%8F%AF%E5%81%9A%E4%BB%A5%E4%B8%8B%E5%A4%84%E7%90%86/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2020/09/30/GitHub%20Pages%20+%20Hexo%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">GitHub Pages + Hexo免费搭建个人博客</a>
@@ -273,7 +339,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2020 鑫鑫<br>
+      &copy; 2020 XinXin<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
