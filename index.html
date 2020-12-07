@@ -64,10 +64,138 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-电视+电脑+移动硬盘" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/04/%E7%94%B5%E8%A7%86+%E7%94%B5%E8%84%91+%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98/" class="article-date">
+  <time datetime="2020-12-04T02:58:38.604Z" itemprop="datePublished">2020-12-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="三星电视访问局域网共享文件"><a href="#三星电视访问局域网共享文件" class="headerlink" title="三星电视访问局域网共享文件"></a>三星电视访问局域网共享文件</h3><ul>
+<li><p>win10电脑打开流媒体共享服务，然后就在三星电视里选择节目源就可以看到电脑了。只限电脑c盘文档，视频，音乐，图片等等文件夹</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/1580824036530452180.html">windows10共享文件夹三星电视UA55MU6700看不到视频</a></li>
+<li><a target="_blank" rel="noopener" href="https://us.community.samsung.com/t5/4k-8k-and-Other-TVs/Sharing-folders-from-PC-to-Samsung-TV/td-p/444945"><strong>Sharing folders from PC to Samsung TV</strong></a></li>
+</ul>
+</li>
+<li><p>三星原生支持UPNP服务器的，如果你是要看电脑里的视频，请去下载UPNP服务端就可以了，如果是路由器，你可以把路由器里面的“媒体服务器”打开即可。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.xitongcheng.com/jiaocheng/win10_article_24882.html">windows10系统怎样打开upnp服务</a></li>
+</ul>
+</li>
+<li><p>如何使用 Remote Access功能</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.samsung.com/cn/support/tv-audio-video/how-to-use-the-remote-access-on-your-samsung-smart-tv/">remote</a></li>
+</ul>
+</li>
+<li><p>三星可以直接播放网上邻居共享的文件。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/521492851039954485.html">Win10怎么看不到网上邻居里其他电脑了？</a></li>
+</ul>
+</li>
+<li><p>smb共享文件</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/110788184">smb共享文件</a></li>
+</ul>
+</li>
+<li><h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
+<li><p>需开启文件共享, <strong>无法从虚拟机共享Mac的文件</strong></p>
+</li>
+<li><p>在网络设置中开启<code>网络发现”和“文件和打印机共享”</code>共享以及流媒体共享</p>
+<ul>
+<li><p>-在Windows 10计算机上搜索“管理高级共享设置”，然后将其打开。</p>
+</li>
+<li><p>-在“管理高级共享设置”页面中，展开“私人”，并确保在“网络发现”下选中“打开网络磁盘覆盖”选项。还要确保选中“打开网络连接设备的自动设置”。在“文件和打印机共享”下，选择“打开文件和打印机共享”。（单击保存更改）。</p>
+</li>
+<li><p>-现在展开“来宾或公共”-&gt;“网络发现”下的-&gt;选择“打开网络发现”和“打开文件和打印机共享”。（单击保存更改）</p>
+</li>
+<li><p>-现在展开“所有网络”-&gt;在“公共文件夹共享”下-&gt;选择“关闭公共文件夹共享”-&gt;在“媒体流”下单击“选择媒体流选项。”-&gt;现在选择“打开媒体”串流”-&gt;在这里，您应该会看到所有可以连接到Wi-Fi并被网络发现的无线设备（例如，电视应列在此处）。确保选中电视旁边的复选框“允许”。现在单击“确定”。</p>
+</li>
+</ul>
+</li>
+<li><p>-再次展开“所有网络”-&gt;确保将“文件共享连接”设置为“使用128位加密来帮助保护文件共享连接”-&gt;在“密码保护的共享”下-&gt;选择“关闭密码保护的共享”。（保存更改）。</p>
+<ul>
+<li><h5 id="影片资源默认在视频文件中，可以在-Movice-and-TV-中添加新的文件夹"><a href="#影片资源默认在视频文件中，可以在-Movice-and-TV-中添加新的文件夹" class="headerlink" title="影片资源默认在视频文件中，可以在 Movice and TV  中添加新的文件夹"></a>影片资源默认在视频文件中，可以在 <code>Movice and TV </code> 中添加新的文件夹</h5></li>
+</ul>
+</li>
+<li><p>服务 –  确保 TCP/IP NetBIOS Helper 以及 Computer Browser 服务处于正在运行状态</p>
+</li>
+<li><p>控制面板  –  启用或关闭系统功能，选中 SMB 1.0/CIFS 文件共享支持</p>
+</li>
+<li><p>upnp服务 - 按下“Win+R”打开运行，输入“services.msc”点击确定打开“服务”；</p>
+<ul>
+<li>打开“Funtion Discovery Resource Publication”，将其启动类型修改为“自动”</li>
+<li>按照此方法按顺序将“SSDP Discovery Service”、“UPnP Device Host”服务进行设置即可</li>
+</ul>
+</li>
+<li><h5 id="右键可以远端在电视上播放，无需将移动硬盘挂载在Windows上面。这样Mac的文件共享也可以用了。"><a href="#右键可以远端在电视上播放，无需将移动硬盘挂载在Windows上面。这样Mac的文件共享也可以用了。" class="headerlink" title="右键可以远端在电视上播放，无需将移动硬盘挂载在Windows上面。这样Mac的文件共享也可以用了。"></a>右键可以远端在电视上播放，无需将移动硬盘挂载在Windows上面。这样Mac的文件共享也可以用了。</h5></li>
+<li><p>虚拟机 无法安装在Mac 最新系统上。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Windows10-使用"><a href="#Windows10-使用" class="headerlink" title="Windows10 使用"></a>Windows10 使用</h3><ul>
+<li>触摸板<ul>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/35972861/answer/1053564259">Macbook 在 Win10 下触摸板怎么样才能更好用一些？除了Boot Camp面板里的设置</a></li>
+</ul>
+</li>
+<li>Win10关机可以网络唤醒，睡眠无法网络唤醒？<ul>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/53821424">远程唤醒</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="关于镜像-amp-投屏-amp-HDMI-amp-电视播放"><a href="#关于镜像-amp-投屏-amp-HDMI-amp-电视播放" class="headerlink" title="关于镜像&amp;投屏&amp;HDMI&amp;电视播放"></a>关于镜像&amp;投屏&amp;HDMI&amp;电视播放</h3><ul>
+<li>镜像和HDMI 都是一样的，影片解码和你的设备有关</li>
+<li>投屏，一般airPlay,DNLA 协议的<ul>
+<li><strong>DLNA协议 : 本质应该是电视解码，乐播的投屏应该就是这种，但是电脑端的镜像模式就不是了</strong>。  只适用于音频、视频、图片推送，将多媒体文件通过无线的方式传送到电视机或投影仪上面</li>
+</ul>
+</li>
+<li>电视播放：如果想要用</li>
+</ul>
+<h3 id="机顶盒"><a href="#机顶盒" class="headerlink" title="机顶盒"></a>机顶盒</h3><ul>
+<li>中国移动机顶盒怎么装第三方软件<ul>
+<li><a target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/244832488817690284">中国移动机顶盒怎么装第三方软件</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="Mac-OS-系统降级"><a href="#Mac-OS-系统降级" class="headerlink" title="Mac OS 系统降级"></a>Mac OS 系统降级</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/39103887">macOS 重装系统 Mojave Catalina Big Sur 升级 降级mac OS</a></p>
+<ul>
+<li><h5 id="必须重置磁盘的，所以先把资料都copy出来吧"><a href="#必须重置磁盘的，所以先把资料都copy出来吧" class="headerlink" title="必须重置磁盘的，所以先把资料都copy出来吧"></a>必须重置磁盘的，所以先把资料都copy出来吧</h5></li>
+<li><p>制作安装盘时候，记得选择GUID。</p>
+</li>
+</ul>
+<h3 id="外接多个移动硬盘"><a href="#外接多个移动硬盘" class="headerlink" title="外接多个移动硬盘"></a>外接多个移动硬盘</h3><p><a target="_blank" rel="noopener" href="https://www.seagate.com/cn/zh/manuals/backupplushub/connect-backupplushub-product-to-your-computer/">Backup Plus Hub</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhizhizhi.com/a/seagate-backup-plus-hub-10tb/">硬盘开箱</a></p>
+<ul>
+<li>最佳选择 <strong>希捷Backup Plus Hub</strong>  自带2个USB接口。<ul>
+<li>技术支持 不确定是否可以带动移动硬盘</li>
+<li>容量越大，需要的电压就越大。</li>
+</ul>
+</li>
+</ul>
+<h3 id="居家行为准则以及赏罚条例"><a href="#居家行为准则以及赏罚条例" class="headerlink" title="居家行为准则以及赏罚条例"></a>居家行为准则以及赏罚条例</h3><h4 id="目前情况以及愿景"><a href="#目前情况以及愿景" class="headerlink" title="目前情况以及愿景"></a>目前情况以及愿景</h4><h4 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h4><h4 id="赏罚"><a href="#赏罚" class="headerlink" title="赏罚"></a>赏罚</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/04/%E7%94%B5%E8%A7%86+%E7%94%B5%E8%84%91+%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98/" data-id="ckieknbu70005s8fy3v4haf6t" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-电梯停了之后——996、内卷化、佛系" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/19/%E7%94%B5%E6%A2%AF%E5%81%9C%E4%BA%86%E4%B9%8B%E5%90%8E%E2%80%94%E2%80%94996%E3%80%81%E5%86%85%E5%8D%B7%E5%8C%96%E3%80%81%E4%BD%9B%E7%B3%BB/" class="article-date">
-  <time datetime="2020-10-19T03:38:18.021Z" itemprop="datePublished">2020-10-19</time>
+  <time datetime="2020-10-19T05:54:50.000Z" itemprop="datePublished">2020-10-19</time>
 </a>
     
   </div>
@@ -125,7 +253,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/19/%E7%94%B5%E6%A2%AF%E5%81%9C%E4%BA%86%E4%B9%8B%E5%90%8E%E2%80%94%E2%80%94996%E3%80%81%E5%86%85%E5%8D%B7%E5%8C%96%E3%80%81%E4%BD%9B%E7%B3%BB/" data-id="ckgg4k9ap00052gfy1pxueun5" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/19/%E7%94%B5%E6%A2%AF%E5%81%9C%E4%BA%86%E4%B9%8B%E5%90%8E%E2%80%94%E2%80%94996%E3%80%81%E5%86%85%E5%8D%B7%E5%8C%96%E3%80%81%E4%BD%9B%E7%B3%BB/" data-id="ckieknbu60004s8fyhpn275ra" class="article-share-link">Share</a>
       
       
     </footer>
@@ -138,7 +266,7 @@
     <article id="post-利用Macbook+移动硬盘实现NAS的效果" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/10/%E5%88%A9%E7%94%A8Macbook+%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E5%AE%9E%E7%8E%B0NAS%E7%9A%84%E6%95%88%E6%9E%9C/" class="article-date">
-  <time datetime="2020-10-10T02:06:49.252Z" itemprop="datePublished">2020-10-10</time>
+  <time datetime="2020-10-10T02:45:14.000Z" itemprop="datePublished">2020-10-10</time>
 </a>
     
   </div>
@@ -206,7 +334,56 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/10/%E5%88%A9%E7%94%A8Macbook+%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E5%AE%9E%E7%8E%B0NAS%E7%9A%84%E6%95%88%E6%9E%9C/" data-id="ckgg4k9an00032gfy0t6074l1" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/10/%E5%88%A9%E7%94%A8Macbook+%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E5%AE%9E%E7%8E%B0NAS%E7%9A%84%E6%95%88%E6%9E%9C/" data-id="ckieknbu50003s8fyer673jh9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/10/hello-world/" class="article-date">
+  <time datetime="2020-10-10T02:45:04.000Z" itemprop="datePublished">2020-10-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/10/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/10/hello-world/" data-id="ckieknbu20001s8fyda7m4zfl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -219,7 +396,7 @@
     <article id="post-weekly_report-sh" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/09/weekly_report-sh/" class="article-date">
-  <time datetime="2020-10-09T02:25:50.000Z" itemprop="datePublished">2020-10-09</time>
+  <time datetime="2020-10-09T07:16:34.000Z" itemprop="datePublished">2020-10-09</time>
 </a>
     
   </div>
@@ -244,73 +421,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/09/weekly_report-sh/" data-id="ckgg4k9ak00022gfy210g18og" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-项目对于重复功能抽取的可做以下处理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/09/%E9%A1%B9%E7%9B%AE%E5%AF%B9%E4%BA%8E%E9%87%8D%E5%A4%8D%E5%8A%9F%E8%83%BD%E6%8A%BD%E5%8F%96%E7%9A%84%E5%8F%AF%E5%81%9A%E4%BB%A5%E4%B8%8B%E5%A4%84%E7%90%86/" class="article-date">
-  <time datetime="2020-10-09T02:25:50.000Z" itemprop="datePublished">2020-10-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/09/%E9%A1%B9%E7%9B%AE%E5%AF%B9%E4%BA%8E%E9%87%8D%E5%A4%8D%E5%8A%9F%E8%83%BD%E6%8A%BD%E5%8F%96%E7%9A%84%E5%8F%AF%E5%81%9A%E4%BB%A5%E4%B8%8B%E5%A4%84%E7%90%86/">项目对于重复功能抽取的可做以下处理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> 基类</p>
-<ul>
-<li><p>抽象出一个基类； A ,B,C 继承它</p>
-<p> 缺点：</p>
-</li>
-<li><p>可读性很差，例如，对于 A/B/C 来说，你看不出来任何feature的行为, 个类里面没有任何东西能告诉你它需要feature。这样表意不明确，因为别处可能会随机存在一个feature，你甚至不知道它是从哪里来的</p>
-</li>
-<li><p>随着业务增加，基类会越来越臃肿。</p>
-</li>
-</ul>
-<p>分类</p>
-<ul>
-<li><p>对他们的基类比如UIView进行扩展, 避免不同类型的feature都融合在一个类中</p>
-<p>  缺点:</p>
-</li>
-<li><p>对于不同的类型Object就无法通用</p>
-</li>
-</ul>
-<p>协议</p>
-<ul>
-<li><p>功能具有插拔性</p>
-</li>
-<li><p>适用场景广泛</p>
-</li>
-<li><p>避免一个类其实只要一个功能情况下，也要继承着多个功能模块</p>
-<p>  缺点:</p>
-<p>OC的协议没有默认实现</p>
-</li>
-</ul>
-<p>了解不同的方案优缺点，可以应对开发中不同的case。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/09/%E9%A1%B9%E7%9B%AE%E5%AF%B9%E4%BA%8E%E9%87%8D%E5%A4%8D%E5%8A%9F%E8%83%BD%E6%8A%BD%E5%8F%96%E7%9A%84%E5%8F%AF%E5%81%9A%E4%BB%A5%E4%B8%8B%E5%A4%84%E7%90%86/" data-id="ckgg4k9ao00042gfycfkjhc38" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/09/weekly_report-sh/" data-id="ckieknbu40002s8fy9r3hcbsm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -322,8 +433,8 @@
   
     <article id="post-GitHub Pages + Hexo免费搭建个人博客" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/09/30/GitHub%20Pages%20+%20Hexo%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
-  <time datetime="2020-09-30T08:47:29.446Z" itemprop="datePublished">2020-09-30</time>
+    <a href="/2020/10/09/GitHub%20Pages%20+%20Hexo%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
+  <time datetime="2020-10-09T02:46:39.000Z" itemprop="datePublished">2020-10-09</time>
 </a>
     
   </div>
@@ -334,7 +445,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/30/GitHub%20Pages%20+%20Hexo%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">GitHub Pages + Hexo免费搭建个人博客</a>
+      <a class="article-title" href="/2020/10/09/GitHub%20Pages%20+%20Hexo%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">GitHub Pages + Hexo免费搭建个人博客</a>
     </h1>
   
 
@@ -426,7 +537,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/30/GitHub%20Pages%20+%20Hexo%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ckgg4k9aa00002gfybxvqbq2y" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/09/GitHub%20Pages%20+%20Hexo%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="ckieknbty0000s8fy537meyiy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -436,10 +547,10 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-项目对于重复功能抽取的可做以下处理" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/09/30/hello-world/" class="article-date">
-  <time datetime="2020-09-30T08:45:23.839Z" itemprop="datePublished">2020-09-30</time>
+    <a href="/2020/10/09/%E9%A1%B9%E7%9B%AE%E5%AF%B9%E4%BA%8E%E9%87%8D%E5%A4%8D%E5%8A%9F%E8%83%BD%E6%8A%BD%E5%8F%96%E7%9A%84%E5%8F%AF%E5%81%9A%E4%BB%A5%E4%B8%8B%E5%A4%84%E7%90%86/" class="article-date">
+  <time datetime="2020-10-09T02:38:08.000Z" itemprop="datePublished">2020-10-09</time>
 </a>
     
   </div>
@@ -450,7 +561,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/30/hello-world/">Hello World</a>
+      <a class="article-title" href="/2020/10/09/%E9%A1%B9%E7%9B%AE%E5%AF%B9%E4%BA%8E%E9%87%8D%E5%A4%8D%E5%8A%9F%E8%83%BD%E6%8A%BD%E5%8F%96%E7%9A%84%E5%8F%AF%E5%81%9A%E4%BB%A5%E4%B8%8B%E5%A4%84%E7%90%86/">项目对于重复功能抽取的可做以下处理</a>
     </h1>
   
 
@@ -458,24 +569,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <p> 基类</p>
+<ul>
+<li><p>抽象出一个基类； A ,B,C 继承它</p>
+<p> 缺点：</p>
+</li>
+<li><p>可读性很差，例如，对于 A/B/C 来说，你看不出来任何feature的行为, 个类里面没有任何东西能告诉你它需要feature。这样表意不明确，因为别处可能会随机存在一个feature，你甚至不知道它是从哪里来的</p>
+</li>
+<li><p>随着业务增加，基类会越来越臃肿。</p>
+</li>
+</ul>
+<p>分类</p>
+<ul>
+<li><p>对他们的基类比如UIView进行扩展, 避免不同类型的feature都融合在一个类中</p>
+<p>  缺点:</p>
+</li>
+<li><p>对于不同的类型Object就无法通用</p>
+</li>
+</ul>
+<p>协议</p>
+<ul>
+<li><p>功能具有插拔性</p>
+</li>
+<li><p>适用场景广泛</p>
+</li>
+<li><p>避免一个类其实只要一个功能情况下，也要继承着多个功能模块</p>
+<p>  缺点:</p>
+<p>OC的协议没有默认实现</p>
+</li>
+</ul>
+<p>了解不同的方案优缺点，可以应对开发中不同的case。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/30/hello-world/" data-id="ckgg4k9ai00012gfy1trka5n1" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/09/%E9%A1%B9%E7%9B%AE%E5%AF%B9%E4%BA%8E%E9%87%8D%E5%A4%8D%E5%8A%9F%E8%83%BD%E6%8A%BD%E5%8F%96%E7%9A%84%E5%8F%AF%E5%81%9A%E4%BB%A5%E4%B8%8B%E5%A4%84%E7%90%86/" data-id="ckieknbu70006s8fy25nx7hg0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -503,7 +631,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
     </div>
   </div>
 
@@ -516,6 +644,10 @@
       <ul>
         
           <li>
+            <a href="/2020/12/04/%E7%94%B5%E8%A7%86+%E7%94%B5%E8%84%91+%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2020/10/19/%E7%94%B5%E6%A2%AF%E5%81%9C%E4%BA%86%E4%B9%8B%E5%90%8E%E2%80%94%E2%80%94996%E3%80%81%E5%86%85%E5%8D%B7%E5%8C%96%E3%80%81%E4%BD%9B%E7%B3%BB/">996、内卷化、佛系</a>
           </li>
         
@@ -524,15 +656,11 @@
           </li>
         
           <li>
+            <a href="/2020/10/10/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
             <a href="/2020/10/09/weekly_report-sh/">weekly_report-sh</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/09/%E9%A1%B9%E7%9B%AE%E5%AF%B9%E4%BA%8E%E9%87%8D%E5%A4%8D%E5%8A%9F%E8%83%BD%E6%8A%BD%E5%8F%96%E7%9A%84%E5%8F%AF%E5%81%9A%E4%BB%A5%E4%B8%8B%E5%A4%84%E7%90%86/">项目对于重复功能抽取的可做以下处理</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/30/GitHub%20Pages%20+%20Hexo%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">GitHub Pages + Hexo免费搭建个人博客</a>
           </li>
         
       </ul>
